@@ -64,7 +64,9 @@ yaf.use_namespace = 1
 
 #### 代码安装
 把文件放到
+```shell
 /wwwroot/data_site/ysapi
+```
 
 #### nginx.conf配置
 ```conf
@@ -90,15 +92,20 @@ yaf.use_namespace = 1
         }
     }
 ```
-下后重启Nginx,修改本机host文件
+
+* 重启Nginx,修改本机host文件
+```shell
 127.0.0.1 api.local.com
+```
 
 ### 浏览器访问
-保存后,重启浏览器打开(以下是yaf默认路由方式):
+* 保存后,重启浏览器打开(以下是yaf默认路由方式):
+```
 http://api.local.com/index/index/index/data/def
 
 http://api.local.com/ index/ index/   index/ data/def
                 域名/  模块/ 控制器/  方法 / 参数/值
+```
 若无问题,将看到:
 
 
