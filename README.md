@@ -3,7 +3,7 @@ ysapi
 
 ## 简介
 ysapi是一个由 swoole + yaf 实现socket服务基础框架.
-由swoole提供socket服务对外提供API接口, yaf提供api对应的业务逻辑
+由swoole实现socket服务,对外提供API接口, yaf提供api对应的业务逻辑
 
 ### 功能介绍
 * 基于socket提供更快的数据返回
