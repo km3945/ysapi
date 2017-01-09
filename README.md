@@ -123,9 +123,9 @@ php /wwwroot/data_site/ysapi/call.php
 ```
 
 ### 客户端接口调用代码用例
+* 用例中我们同时调用3个接口获得不同的数据
 ```php
 try {
-    $sTime=microtime(true);
     $api = new apicall();
     $api->add('pagelist','index/index/index',['page'=>1]);
     $api->add('user','index/index/index2',['user'=>1]);
@@ -146,10 +146,7 @@ try {
     $user=$rs['user'];
     $mess=$rs['mess'];
 
-    $endTime=run_time($sTime);
     echo(print_r($pagelist,1));
-    echo($endTime.' '.$code.' '.$rs['serv']);
-
 }catch (Exception $e){
 	echo $e->getMessage().PHP_EOL;
 	die('ERROR-------------------------------'.PHP_EOL);
