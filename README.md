@@ -107,7 +107,7 @@ http://api.local.com/ index/ index/   index/ data/def
                 域名/  模块/ 控制器/  方法 / 参数/值
 ```
 若无问题,将看到:
-![web](https://raw.githubusercontent.com/Neeke/SeasLog/master/tests/SeasLogVSlog4php.png)
+![web](https://github.com/km3945/ysapi/blob/master/doc/web1.png)
 
 之后就可以按yaf的方式开发API业务逻辑
 
