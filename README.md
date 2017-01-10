@@ -152,3 +152,34 @@ try {
 	die('ERROR-------------------------------'.PHP_EOL);
 }
 ```
+
+### 开发
+* 按照YAF的方式去开发接口业务逻辑
+* 新建模块->建控制器->建方法->浏览器访问你的方法进行调试
+* 方法传入的参数可到/data/模块/控制器文件中定义,如:
+```php
+// /yafapi/data/Index/Index.php
+// 路径及名字按YAF的方式定义
+class IndexData{
+	public static $index3Action=[  //名字引方法名对应,键名是你要引用的节点名,默认def
+		'def'=>[
+			'sql'=>'select * from apilogs ORDER BY RAND() LIMIT 1',
+			'sql1'=>'select * from apilogs ORDER BY RAND() LIMIT 1'
+		],
+		'test1'=>[
+			'sql'=>'select * from apilogs ORDER BY RAND() LIMIT 2',
+			'sql1'=>'select * from apilogs ORDER BY RAND() LIMIT 1'
+		],
+		'test2'=>[
+			'sql'=>'select * from apilogs ORDER BY RAND() LIMIT 3',
+			'sql1'=>'select * from apilogs ORDER BY RAND() LIMIT 1'
+		],
+	];
+
+/*
+http://api.local.com/index/index/index3/
+http://api.local.com/index/index/index3/data/def
+http://api.local.com/index/index/index3/data/test1
+http://api.local.com/index/index/index3/data/test2
+*/
+```
