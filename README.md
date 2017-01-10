@@ -119,7 +119,7 @@ http://api.local.com/ index/  index/  index/ data/def
 php /wwwroot/data_site/ysapi/run.php
 ```
 服务启动无异常,可以使用api调用方法来尝试调用:
-```shell
+```php
 php /wwwroot/data_site/ysapi/call.php
 ```
 
@@ -200,7 +200,7 @@ class IndexData{
 
 // http://api.local.com/index/index/index3/
 // http://api.local.com/index/index/index3/data/def
-// http://api.local.com/index/index/index3/data/test1
-// http://api.local.com/index/index/index3/data/test2
+// http://api.local.com/index/index/index3/data/m1
+// http://api.local.com/index/index/index3/data/m2
 
 ```
