@@ -161,7 +161,7 @@ try {
 // /ysapi/data/Index/Index.php
 // 路径及名字按YAF的方式定义
 class IndexData{
-	public static $index3Action=[  //名字引方法名对应,键名是你要引用的节点名,默认def
+	public static $index3Action=[  //名字和方法名对应,键名是你要引用的节点名,默认def
 		'def'=>[
 			'sql'=>'select * from apilogs ORDER BY RAND() LIMIT 1',
 			'sql1'=>'select * from apilogs ORDER BY RAND() LIMIT 1'
