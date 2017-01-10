@@ -2,8 +2,8 @@ ysapi
 ======
 
 ## 简介
-ysapi是一个由 swoole + yaf 实现socket服务基础框架.
-由swoole实现socket服务,对外提供API接口, yaf提供api对应的业务逻辑
+* ysapi是一个由 swoole + yaf 实现socket服务基础框架.
+* 由swoole实现socket服务,对外提供API接口, yaf负责api对应的业务逻辑.
 
 ### 功能介绍
 * 基于socket提供更快的数据返回
@@ -21,7 +21,7 @@ ysapi是一个由 swoole + yaf 实现socket服务基础框架.
 * 每次只用修改->保存->刷新浏览器就能看到调试信息和结果,和以往的工作方式一样.
 * 答案是肯定的.
 * 基于yaf的特点,很方便的实现.
-* 当业务逻辑实现以后.只要发布或重启servers即可.
+* 当业务逻辑实现以后,只要发布或重启servers即可.
 
 ## 安装
 ### 必要的扩展
@@ -107,7 +107,7 @@ http://api.local.com/ index/ index/   index/ data/def
                 域名/  模块/ 控制器/  方法 / 参数/值
 ```
 若无问题,将看到:
-
+![web](https://raw.githubusercontent.com/Neeke/SeasLog/master/tests/SeasLogVSlog4php.png)
 
 之后就可以按yaf的方式开发API业务逻辑
 
