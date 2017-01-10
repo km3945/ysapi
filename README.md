@@ -103,7 +103,7 @@ yaf.use_namespace = 1
 ```
 http://api.local.com/index/index/index/data/def
 
-http://api.local.com/ index/ index/   index/ data/def
+http://api.local.com/ index/  index/  index/ data/def
                 域名/  模块/ 控制器/  方法 / 参数/值
 ```
 若无问题,将看到:
