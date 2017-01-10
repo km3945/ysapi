@@ -101,7 +101,7 @@ yaf.use_namespace = 1
 
 ### 浏览器访问
 * 保存后,重启浏览器打开(以下是yaf默认路由方式):
-```
+```shell
 http://api.local.com/index/index/index/data/def
 
 http://api.local.com/ index/  index/  index/ data/def
@@ -198,10 +198,9 @@ class IndexData{
 		],
 	];
 
-/*
-http://api.local.com/index/index/index3/
-http://api.local.com/index/index/index3/data/def
-http://api.local.com/index/index/index3/data/test1
-http://api.local.com/index/index/index3/data/test2
-*/
+// http://api.local.com/index/index/index3/
+// http://api.local.com/index/index/index3/data/def
+// http://api.local.com/index/index/index3/data/test1
+// http://api.local.com/index/index/index3/data/test2
+
 ```
