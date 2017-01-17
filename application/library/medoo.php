@@ -37,7 +37,7 @@ class medoo
 	protected $option = array();
 
 	// Variable
-	protected $logs = array();
+	protected $logs = '';
 
 	protected $debug_mode = false;
 
@@ -185,7 +185,7 @@ class medoo
 			return false;
 		}
 
-		$this->logs[] = $query;
+		$this->logs = $query;
 		try {
 			return @$this->pdo->query($query);
 		}catch (\PDOException $e) {
@@ -208,7 +208,7 @@ class medoo
 			return false;
 		}
 
-		$this->logs[] = $query;
+		$this->logs = $query;
 		try {
 			return @$this->pdo->exec($query);
 		}catch (\PDOException $e) {
@@ -785,7 +785,7 @@ class medoo
 		$column = $where == null ? $join : $columns;
 
 		$is_single_column = (is_string($column) && $column !== '*');
-		
+
 		$query = $this->query($this->select_context($table, $join, $columns, $where));
 
 		$stack = array();
@@ -992,7 +992,7 @@ class medoo
 				{
 					return $data[ 0 ][ preg_replace('/^[\w]*\./i', "", $column) ];
 				}
-				
+
 				if ($column === '*')
 				{
 					return $data[ 0 ];
@@ -1131,7 +1131,7 @@ class medoo
 
 	public function last_query()
 	{
-		return end($this->logs);
+		return $this->logs;
 	}
 
 	public function log()
